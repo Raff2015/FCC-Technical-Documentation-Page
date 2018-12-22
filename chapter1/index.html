@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Why Atom?</title>
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" media="all" href="../main.css" data-proofer-ignore>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#quicksearch-query').lunrSearch({
+
+                indexUrl: '/search.json',
+
+                quickSearchResults: '.autocomplete-results',
+                quickSearchEntries: '.result-group',
+                quickSearchTemplate: '#quicksearch-results-template',
+
+                searchResults: '.search-container',
+                searchEntries: '.search-results',
+                searchTemplate: '#search-results-template'
+            })
+        })
+    </script>
+
+</head>
+
+<body class="layout-article">
+    <div class="footer-push">
+
+
+        <div class="wrapper documents content-push wide">
+            <script id="quicksearch-results-template" type="text/mustache">
+                [[#entries]]
+    <a href="[[url]]" class="js-articles-quicksearch-link">[[title]]</a>
+  [[/entries]]
+  <a class="initial quicksearch-seemore" href="/search?q=">See more results</a>
+</script>
+
+            <script id="search-results-template" type="text/mustache">
+                [[#entries]]
+    <li>
+      <h3>
+        <a href="[[url]]">[[title]]</a>
+        <div class="label"><a href="[[category_url]]">[[category]]</a></div>
+      </h3>
+      <p>
+      [[excerpt]]
+      </p>
+    </li>
+  [[/entries]]
+</script>
+
+            <div class="documents-search">
+                <form accept-charset="UTF-8" action="/search" id="articles-search" method="get">
+                    <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+                    <input type="search" name="q" id="quicksearch-query" class="documents-search-input js-articles-quicksearch"
+                        placeholder="Search the Flight Manual" autocomplete="off">
+                </form>
+            </div>
+
+            <div class="autocomplete-results" style="display: none;">
+                <div class="result-group"></div>
+            </div>
+
+
+            <div class="toc">
+
+
+
+                <h4>
+                    <a>Chapter 1: Getting Started</a>
+                </h4>
+                <ul>
+
+                    <li class="unselected">
+
+                        <a href="../index.html">Enter Billy Graham</a>
+
+                    </li>
+
+                    <li class="selected">
+                        <i class="fas fa-code"></i>
+                        <a href="#html">The HTML</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="#bootstrap">Bootstrap</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="#responsive">Responsive</a>
+                    </li>
+
+                </ul>
+
+                <h4>
+                    <a href="/chapter2">Chapter 2: Survey Form</a>
+                </h4>
+                <ul>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/atom-packages">Atom Packages</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/moving-in-atom">Moving in Atom</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/atom-selections">Atom Selections</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/editing-and-deleting-text">Editing and Deleting Text</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/find-and-replace">Find and Replace</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/snippets">Snippets</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/autocomplete">Autocomplete</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/folding">Folding</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/panes">Panes</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/pending-pane-items">Pending Pane Items</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/grammar">Grammar</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/version-control-in-atom">Version Control in Atom</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/github-package">GitHub package</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/writing-in-atom">Writing in Atom</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/basic-customization">Basic Customization</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/using-atom/sections/summary">Summary</a>
+                    </li>
+
+                </ul>
+
+                <h4>
+                    <a href="/hacking-atom">Chapter 3: Hacking Atom</a>
+                </h4>
+                <ul>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/tools-of-the-trade">Tools of the Trade</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/the-init-file">The Init File</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/package-word-count">Package: Word Count</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/package-modifying-text">Package: Modifying Text</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/package-active-editor-info">Package: Active Editor Info</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/creating-a-theme">Creating a Theme</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/creating-a-grammar">Creating a Grammar</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/creating-a-legacy-textmate-grammar">Creating a Legacy TextMate
+                            Grammar</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/publishing">Publishing</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/iconography">Iconography</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/debugging">Debugging</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/writing-specs">Writing specs</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/handling-uris">Handling URIs</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/cross-platform-compatibility">Cross-Platform Compatibility</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/converting-from-textmate">Converting from TextMate</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/hacking-on-atom-core">Hacking on Atom Core</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/contributing-to-official-atom-packages">Contributing to
+                            Official Atom Packages</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/creating-a-fork-of-a-core-package-in-atom-atom">Creating a Fork
+                            of a Core Package in atom/atom</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/maintaining-a-fork-of-a-core-package-in-atom-atom">Maintaining
+                            a Fork of a Core Package in atom/atom</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/hacking-atom/sections/summary">Summary</a>
+                    </li>
+
+                </ul>
+
+                <h4>
+                    <a href="/behind-atom">Chapter 4: Behind Atom</a>
+                </h4>
+                <ul>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/configuration-api">Configuration API</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/keymaps-in-depth">Keymaps In-Depth</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/scoped-settings-scopes-and-scope-descriptors">Scoped Settings,
+                            Scopes and Scope Descriptors</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/serialization-in-atom">Serialization in Atom</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/developing-node-modules">Developing Node Modules</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/interacting-with-other-packages-via-services">Interacting With
+                            Other Packages Via Services</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/maintaining-your-packages">Maintaining Your Packages</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/how-atom-uses-chromium-snapshots">How Atom Uses Chromium
+                            Snapshots</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/behind-atom/sections/summary">Summary</a>
+                    </li>
+
+                </ul>
+
+
+
+                <h4>
+                    <a href="/resources">Appendix A: Resources</a>
+                </h4>
+                <ul>
+
+                    <li class="unselected">
+                        <a href="/resources/sections/glossary">Glossary</a>
+                    </li>
+
+                </ul>
+
+                <h4>
+                    <a href="/shadow-dom">Appendix B: Shadow DOM</a>
+                </h4>
+                <ul>
+
+                    <li class="unselected">
+                        <a href="/shadow-dom/sections/removing-shadow-dom-styles">Removing Shadow DOM styles</a>
+                    </li>
+
+                </ul>
+
+                <h4>
+                    <a href="/upgrading-to-1-0-apis">Appendix C: Upgrading to 1.0 APIs</a>
+                </h4>
+                <ul>
+
+                    <li class="unselected">
+                        <a href="/upgrading-to-1-0-apis/sections/upgrading-your-package">Upgrading Your Package</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/upgrading-to-1-0-apis/sections/upgrading-your-ui-theme-or-package-selectors">Upgrading
+                            Your UI Theme Or Package Selectors</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/upgrading-to-1-0-apis/sections/upgrading-your-syntax-theme">Upgrading Your Syntax
+                            Theme</a>
+                    </li>
+
+                </ul>
+
+                <h4>
+                    <a href="/atom-server-side-apis">Appendix D: Atom server-side APIs</a>
+                </h4>
+                <ul>
+
+                    <li class="unselected">
+                        <a href="/atom-server-side-apis/sections/atom-package-server-api">Atom package server API</a>
+                    </li>
+
+                    <li class="unselected">
+                        <a href="/atom-server-side-apis/sections/atom-update-server-api">Atom update server API</a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+
+            <h1 class="document-title">
+                <div id="platform-nav">
+                    <span class="octicon octicon-device-desktop"></span>
+                    <ul>
+                        <li class="platform-mac">
+                            <a href="#platform-mac" data-platform="mac">
+                                mac
+                            </a>
+                        </li>
+                        <li class="platform-windows">
+                            <a href="#platform-windows" data-platform="windows">
+                                windows
+                            </a>
+                        </li>
+                        <li class="platform-linux">
+                            <a href="#platform-linux" data-platform="linux">
+                                linux
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </h1>
+
+            <div class="markdown-body document-content">
+
+                <h3>
+                    <a id="html" class="anchor" href="#html" aria-hidden="true"><span class="octicon octicon-link"></span></a>The
+                    HTML</h3>
+
+                <img src="https://i.imgur.com/snQkDja.jpg" alt="html">
+
+
+                <p>Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web
+                applications. With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone
+                technologies for the World Wide Web, like my <b><span id="main">Billy Graham Tribute Page</span></b> for example.</p>
+
+                <img src="https://i.imgur.com/m6GZaUU.jpg" alt="html">
+
+                
+
+                <p>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects
+                such as interactive forms may be embedded into the rendered page. HTML provides a means to create
+                structured documents by denoting structural semantics for text such as headings, paragraphs, lists,
+                links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.</p>
+
+
+                   
+
+                             </div>
+        </div>
+        <div class="footer-pad"></div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="wrapper no-pad">
+                <ul class="footer-left">
+                    <li><a href="https://atom.io/terms">Terms of Use</a></li>
+                    <li><a href="https://help.github.com/articles/github-privacy-policy/">Privacy</a></li>
+                    <li><a href="https://github.com/atom/atom/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+                    <li><a href="https://atom.io/releases">Releases</a></li>
+                    <li><a href="https://atom.io/faq">FAQ</a></li>
+                    <li><a href="https://atom.io/contact">Contact</a></li>
+                    <li><a href="https://github.com/atom/flight-manual.atom.io/blob/master/CONTRIBUTING.md">Contribute!</a></li>
+                </ul>
+
+                <div class="footer-right">
+                    <a href="https://github.com"><span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span>
+                        by <span class="octicon octicon-logo-github"></span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
