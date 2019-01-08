@@ -15,6 +15,15 @@ body {
   -webkit-text-underline-position: under;
   text-underline-position: under;
 } 
+
+
+#main-purple {
+    
+    -webkit-text-decoration: rgb(64, 20, 165) solid underline;
+  text-decoration: rgb(64, 20, 165) solid underline;
+  -webkit-text-underline-position: under;
+  text-underline-position: under;
+} 
 /* Fin Underline*/
 
 #navbar {
