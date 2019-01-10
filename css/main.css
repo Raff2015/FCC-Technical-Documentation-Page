@@ -7,6 +7,8 @@ body {
     line-height: 1.5;
 }
 
+
+
 /*Underline*/
 #main {
     
@@ -77,10 +79,8 @@ header {
 }
 
 #main-doc {
-    position: absolute;
-    margin-left: 310px;
-    padding: 20px;
-    margin-bottom: 110px;
+    position: relative;
+  
 }
 
 section article {
@@ -128,11 +128,7 @@ code {
         border-bottom: 2px solid;
     }
 
-    #main-doc {
-        position: relative;
-        margin-left: 0px;
-        margin-top: 270px;
-    }
+    
 
     #main-doc section {
         /*     padding-top: 240px; */
