@@ -4280,6 +4280,7 @@ kbd {
     content: ''
 }
 
+/* change .tc to .nav*/
 .toc {
     float: left;
     display: block;
